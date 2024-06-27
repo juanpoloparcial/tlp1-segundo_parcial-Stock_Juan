@@ -62,11 +62,11 @@ app.delete("/books/:id",(req,res)=>{
     const getLibro = db.find((title)=>title.id === id);
 
     const indexBook = db.indexOf(getLibro);
-    const eliminarBook = db.splice(indexBook, 1); //1 elimina, 0 para agregar
+    const eliminarBook = db.splice(indexBook, 1);
 
     res.json({message: "Libro borrado con éxito!"})
 })
 
 
 // Crear el Puerto
-app.listen(4000,()=>console.log("Servidor Corriendo en el puerto 4000"))
+app.listen(3000,()=>console.log("Servidor Corriendo en el puerto 3000"))
